@@ -2,4 +2,3 @@
 *.pyc
 build/*
 tests/cpp/generated/*
-projects/*
