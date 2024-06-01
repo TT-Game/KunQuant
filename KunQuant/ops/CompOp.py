@@ -111,6 +111,18 @@ class WindowedCorrelation(WindowedCompositiveOp):
             out = Div(vsum1, sum_xy)
         return b.ops
 
+#todo: 移动指数加权
+class WindowedExponentMoving(WindowedCompositiveOp):
+    def decompose(self) -> List[OpBase]:
+        window = self.attrs["window"]
+        x = self.inputs[0]
+        y = self.inputs[1]
+        b = Builder(self.get_parent())
+        with b:
+            pass
+        return b.ops  
+
+
 class TsArgMax(WindowedCompositiveOp):
     def decompose(self) -> List[OpBase]:
         b = Builder(self.get_parent())
